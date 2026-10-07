@@ -7,6 +7,7 @@ import ProductsPage from "./pages/ProductsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
+import ChatbotWidget from "./components/Chatbot/ChatbotWidget";
 
 function App() {
 	// Parse initial path from window.location
@@ -194,6 +195,13 @@ function App() {
 			<Footer
 				onNavigate={navigate}
 				onSelectCategory={(cat) => setInitialCategory(cat)}
+			/>
+
+			{/* AI Powered Gemini FAQ & Furniture Chatbot */}
+			<ChatbotWidget
+				onSelectProduct={handleSelectProduct}
+				onInquire={handleInquire}
+				onNavigate={navigate}
 			/>
 		</div>
 	);
