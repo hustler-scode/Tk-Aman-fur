@@ -31,32 +31,13 @@ const ProductDetailPage = ({
 	];
 
 	return (
-		<div className='w-full pb-24 bg-grey-50'>
-			{/* HERO SECTION */}
-			<section className='relative bg-hero bg-cover bg-center text-white pt-36 pb-14 mb-10 overflow-hidden'>
-				{/* Lighter architectural overlay matching home page hero */}
-				<div className='absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/25 backdrop-blur-[0.5px]' />
-
-				<div className='container mx-auto px-4 relative z-10 text-center max-w-3xl'>
-					<span className='inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full text-xs md:text-sm font-medium tracking-widest uppercase mb-3 text-grey-100 border border-white/20 animate-fade-in'>
-						<span className='w-2 h-2 rounded-full bg-emerald-400 animate-pulse' />
-						{product.category}
-					</span>
-					<h1 className='text-3xl sm:text-4xl md:text-5xl font-primary font-bold text-white mt-1 mb-3 drop-shadow-sm'>
-						{product.name}
-					</h1>
-					<p className='text-sm sm:text-base md:text-[17px] text-grey-100/90 font-normal leading-relaxed md:leading-8 max-w-xl mx-auto drop-shadow-sm antialiased'>
-						{product.tagline || product.description}
-					</p>
-				</div>
-			</section>
-
+		<div className='w-full pt-28 md:pt-32 pb-24 bg-grey-50'>
 			<div className='container mx-auto px-4'>
-				{/* Breadcrumb */}
+				{/* Breadcrumb Navigation directly at top */}
 				<Breadcrumb items={breadcrumbItems} />
 
-				{/* Product Main Section: Gallery + Info Panel */}
-				<div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24'>
+				{/* Product Main Section: Gallery + Info Panel directly visible */}
+				<div className='grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start mb-20'>
 					<ProductGallery product={product} />
 
 					<ProductInfoPanel
@@ -82,3 +63,4 @@ const ProductDetailPage = ({
 };
 
 export default ProductDetailPage;
+

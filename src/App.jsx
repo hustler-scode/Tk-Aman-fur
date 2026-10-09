@@ -186,6 +186,7 @@ function App() {
 				onNavigate={navigate}
 				wishlistCount={wishlist.length}
 				onWishlistClick={handleWishlistClick}
+				hasLightHeader={currentPath.startsWith("/products/") || (currentPath === "/contact" && Boolean(inquiryProduct))}
 			/>
 
 			{/* Main Page View */}
